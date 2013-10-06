@@ -1,6 +1,8 @@
 Timelife::Application.routes.draw do
 
-  get "user/new"
-  root 'application#index'
+  get "users/new"
+  get "sign_up" => "users#new", :as => "sign_up"
+  root 'users#new'
+  resources :users
 
 end
