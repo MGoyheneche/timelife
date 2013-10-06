@@ -38,6 +38,16 @@ gem 'annotate', ">=2.5.0"
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+end
+
+group :development do
+	gem 'rspec-nc'
+  gem 'guard-rspec'
+end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
