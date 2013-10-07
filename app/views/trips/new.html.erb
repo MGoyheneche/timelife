@@ -1,0 +1,23 @@
+<h1>create a Trip</h1>
+
+<%= form_for @trip do |f| %>
+  <% if @trip.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @trip.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :subtitle %><br />
+    <%= f.text_field :subtitle %>
+  </p>
+  <p class="button"><%= f.submit %></p>
+<% end %>

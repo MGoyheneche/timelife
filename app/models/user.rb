@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
 
   validates :email, uniqueness: true, presence: true, format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/ }
 
+  has_many :trips
+
   has_secure_password
 
 end
