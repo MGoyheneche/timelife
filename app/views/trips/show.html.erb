@@ -8,10 +8,10 @@
   </p>
   <p>
     <%= f.label :date %><br />
-    <%= f.password_field :date %>
+    <%= f.text_field :date %>
   </p>
   <p>
 	<%= hidden_field_tag :trip, @trip.id %>
-  <%= f.submit "Ribbit!" %>
+  <%= f.submit %>
   </p>
 <% end %>

@@ -3,7 +3,7 @@ class TripsController < ApplicationController
   	@trips = Trip.all
 
   	if @trips.length == 0 # Not very elegant
-	  	redirect_to new_trip_url
+	  	redirect_to new_trip_path
   	end
   end
 

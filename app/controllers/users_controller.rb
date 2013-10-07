@@ -5,20 +5,23 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    puts user_params
     if @user.save
       session[:user_id] = @user.id
-      redirect_to trips_url, :notice => "Signed up!"
+      redirect_to trips_path, :notice => "Signed up!"
     else
       render "new"
     end
   end
 
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   private
 
   def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
+      params.require(:user).permit(:email, :username, :password, :password_confirmation)
   end
 
 end
