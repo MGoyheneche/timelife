@@ -16,6 +16,10 @@
     <%= f.text_field :title %>
   </p>
   <p>
+    <%= f.file_field :cover %>
+    <%= f.hidden_field :cover_cache %>
+  </p>
+  <p>
     <%= f.label :subtitle %><br />
     <%= f.text_field :subtitle %>
   </p>

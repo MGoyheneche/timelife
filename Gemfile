@@ -48,8 +48,9 @@ group :development do
   gem 'guard-rspec'
 end
 
+gem 'quiet_assets', :group => :development
 
-
+gem 'carrierwave'
 
 # Use unicorn as the app server
 # gem 'unicorn'

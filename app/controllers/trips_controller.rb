@@ -1,8 +1,14 @@
 class TripsController < ApplicationController
   def index
-  	@trips = Trip.all
 
-  	if @trips.length == 0 # Not very elegant
+    @user = User.find_by_username("MGoyheneche")
+  	@trips = @user.trips
+
+    puts "\n********************\n"
+    p @trips
+
+
+  	if !@trips
 	  	redirect_to new_trip_path
   	end
   end
