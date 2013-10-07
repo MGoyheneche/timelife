@@ -1,2 +1,17 @@
 <%= @trip.title %>
 <%= @trip.user.email %>
+
+<%= form_for @day do |f| %>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :date %><br />
+    <%= f.password_field :date %>
+  </p>
+  <p>
+	<%= hidden_field_tag :trip, @trip.id %>
+  <%= f.submit "Ribbit!" %>
+  </p>
+<% end %>
